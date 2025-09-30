@@ -1,0 +1,28 @@
+{
+  "unary": [
+    { "symbol": "!", "precedence": 6, "assoc": "right", "types": { "in": ["BOOL"], "out": "BOOL" } },
+    { "symbol": "+", "precedence": 6, "assoc": "right", "types": { "in": ["INT","FLOAT","TIME"], "out": "same" } },
+    { "symbol": "-", "precedence": 6, "assoc": "right", "types": { "in": ["INT","FLOAT","TIME"], "out": "same" } }
+  ],
+  "binary": [
+    { "symbol": "*", "precedence": 5, "assoc": "left" },
+    { "symbol": "/", "precedence": 5, "assoc": "left" },
+    { "symbol": "%", "precedence": 5, "assoc": "left" },
+    { "symbol": "+", "precedence": 4, "assoc": "left" },
+    { "symbol": "-", "precedence": 4, "assoc": "left" },
+    { "symbols": ["==","!=", "<","<=",">",">="], "precedence": 3, "assoc": "left" },
+    { "symbol": "&&", "precedence": 2, "assoc": "left" },
+    { "symbol": "||", "precedence": 1, "assoc": "left" }
+  ],
+  "typeRules": {
+    "equality": ["INT","FLOAT","BOOL","STRING","DATE","TIME"],
+    "relational": ["INT","FLOAT","DATE","TIME"],
+    "arith": {
+      "+": [["INT","INT","INT"],["INT","FLOAT","FLOAT"],["FLOAT","INT","FLOAT"],["FLOAT","FLOAT","FLOAT"],["DATE","TIME","DATE"],["TIME","TIME","TIME"]],
+      "-": [["INT","INT","INT"],["INT","FLOAT","FLOAT"],["FLOAT","INT","FLOAT"],["FLOAT","FLOAT","FLOAT"],["DATE","DATE","TIME"],["DATE","TIME","DATE"],["TIME","TIME","TIME"]],
+      "*": [["INT","INT","INT"],["INT","FLOAT","FLOAT"],["FLOAT","INT","FLOAT"],["FLOAT","FLOAT","FLOAT"],["TIME","INT","TIME"],["INT","TIME","TIME"],["TIME","FLOAT","TIME"],["FLOAT","TIME","TIME"]],
+      "/": [["INT","INT","INT"],["INT","FLOAT","FLOAT"],["FLOAT","INT","FLOAT"],["FLOAT","FLOAT","FLOAT"],["TIME","TIME","FLOAT"],["TIME","FLOAT","TIME"],["TIME","INT","TIME"]],
+      "%": [["INT","INT","INT"],["INT","FLOAT","FLOAT"],["FLOAT","INT","FLOAT"],["FLOAT","FLOAT","FLOAT"],["TIME","TIME","TIME"]]
+    }
+  }
+}

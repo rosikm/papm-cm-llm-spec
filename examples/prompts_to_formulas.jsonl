@@ -1,0 +1,12 @@
+{"id":"ex.agg.001","natural_language":"Per activity, average duration of events in the current view.","formula":"AVG(EventsPerAttribute, DURATION())","rationale":"Events grouped by activity; use EventsPerAttribute.","assertions":["return_type in [TIME, FLOAT]"]}
+{"id":"ex.agg.002","natural_language":"Overall number of events performed by 'Laura' in the view.","formula":"COUNTIF(ViewEvents, [userName] == \"Laura\")","rationale":"Filter in view scope.","assertions":["uses_function = COUNTIF"]}
+{"id":"ex.agg.003","natural_language":"Distinct vendors with invoice amount > 10k per case.","formula":"COUNTUNIQUEIF([CaseId], [InvoiceAmount] > 10000, [VendorId])","rationale":"Case grouping; filter; distinct on VendorId."}
+{"id":"ex.stats.004","natural_language":"For each case, active time divided by total duration.","formula":"ACTIVETIME() / DURATION()","rationale":"Case context → both stats valid.","assertions":["returns FLOAT"]}
+{"id":"ex.stats.005","natural_language":"Flag events that occur in parallel with any other event.","formula":"ISPARALLEL()","rationale":"Event context boolean."}
+{"id":"ex.time.006","natural_language":"Add 14 days to the end timestamp.","formula":"ADDDAYS(END(), 14)","rationale":"END() in event/case/process; adds days."}
+{"id":"ex.time.007","natural_language":"Extract month number from event start.","formula":"MONTH(START())"}
+{"id":"ex.string.008","natural_language":"Mark cases as 'High' when total invoice per case >= 50k, else 'Normal'.","formula":"IF(SUM(CaseEvents, [InvoiceAmount]) >= 50000, \"High\", \"Normal\")"}
+{"id":"ex.edge.009","natural_language":"For each edge, sum of source event duration plus edge duration.","formula":"SUM(ViewEdges, SOURCE(DURATION()) + DURATION())","rationale":"Use SOURCE() on edges; add path duration."}
+{"id":"ex.quantile.010","natural_language":"Per activity, the 90th percentile of event duration in the process.","formula":"QUANTILE(\"event\", DURATION(), 0.9, 200)","rationale":"Quantile in event context across process."}
+{"id":"ex.bad.011","natural_language":"Return the attribute with spaces in its name 'invoice total'.","formula":"GETVALUE(\"invoice total\")","negative":false,"teaching_point":"Use GETVALUE for names with spaces."}
+{"id":"ex.contrast.012","natural_language":"Count events > 10k vs. distinct vendors > 10k (contrast).","formula":"COUNTIF(ViewEvents, [InvoiceAmount] > 10000) // vs // COUNTUNIQUEIF(ViewEvents, [InvoiceAmount] > 10000, [VendorId])","negative":false,"teaching_point":"COUNTIF counts rows; COUNTUNIQUEIF dedupes by [VendorId]."}

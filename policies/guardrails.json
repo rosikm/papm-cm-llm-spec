@@ -1,0 +1,8 @@
+{
+  "app_scope_note": "Custom metric operations are available in PAPM desktop app only; not Power Fx.",
+  "deny_unlisted_functions": true,
+  "forbid_unknown_contexts": true,
+  "max_nesting_depth": 12,
+  "quantile": { "compression_range": [20, 1000], "default": 200 },
+  "cdf": { "compression_range": [20, 1000], "default": 200 }
+}

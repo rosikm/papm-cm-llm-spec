@@ -1,0 +1,6 @@
+{
+  "function_case": "UPPER",
+  "identifier_case": "preserve",
+  "quotes": { "strings": "\"", "attributes_with_spaces": "GETVALUE(\"...\")" },
+  "spacing": { "comma": "no-space-before", "binary_ops": "space-around" }
+}

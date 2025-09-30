@@ -1,0 +1,17 @@
+Expression      ::= OrExpr ;
+OrExpr          ::= AndExpr { "||" AndExpr } ;
+AndExpr         ::= CmpExpr { "&&" CmpExpr } ;
+CmpExpr         ::= AddExpr [ ( "==" | "!=" | "<" | "<=" | ">" | ">=" ) AddExpr ] ;
+AddExpr         ::= MulExpr { ( "+" | "-" ) MulExpr } ;
+MulExpr         ::= UnaryExpr { ( "*" | "/" | "%" ) UnaryExpr } ;
+UnaryExpr       ::= [ "!" | "+" | "-" ] Primary ;
+Primary         ::= literal
+                  | Identifier
+                  | functionCall
+                  | "(" Expression ")" ;
+
+functionCall    ::= IDENT "(" [ ArgList ] ")" ;
+ArgList         ::= Expression { "," Expression } ;
+
+literal         ::= INT | FLOAT | STRING | BOOL | DATE_LITERAL | TIME_LITERAL ;
+IDENT           ::= /* letters, digits, underscore, not starting with digit */ ;

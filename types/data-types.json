@@ -1,0 +1,11 @@
+{
+  "types": [
+    { "name": "INT", "description": "Integer", "range": "-9223372036854775808..9223372036854775807" },
+    { "name": "FLOAT", "description": "Real numbers", "range": "±5.0e−324..±1.7e308 (~15–17 digits precision)" },
+    { "name": "BOOL", "description": "Boolean", "values": ["TRUE","FALSE"] },
+    { "name": "STRING", "description": "Text" },
+    { "name": "DATE", "description": "Date and time", "range": "0001-01-01T00:00:00 .. 9999-12-31T23:59:59" },
+    { "name": "TIME", "description": "Time interval", "range": "−10675199.02:48:05.4775808 .. +10675199.02:48:05.4775807" }
+  ],
+  "doc_url": "https://learn.microsoft.com/en-us/power-automate/minit/data-types-custom-metrics"
+}

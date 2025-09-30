@@ -1,0 +1,7 @@
+{
+  "constants": [
+    { "name": "PI", "type": "FLOAT", "value": 3.14159265358979 },
+    { "name": "E",  "type": "FLOAT", "value": 2.71828182845905 }
+  ],
+  "doc_url": "https://learn.microsoft.com/en-us/power-automate/minit/constants"
+}

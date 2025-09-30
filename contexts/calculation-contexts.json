@@ -1,0 +1,11 @@
+{
+  "contexts": [
+    "Implicit", "AllInView", "ViewCases", "ViewEvents", "ViewEdges",
+    "AllInProcess", "ProcessCases", "ProcessEvents", "ProcessEdges",
+    "AllInBR", "BRCases", "BREvents", "BREdges",
+    "EventsPerAttribute", "EdgesPerAttribute", "CasesPerAttribute",
+    "CaseEvents", "CaseEdges"
+  ],
+  "notes": "Defines data scope for aggregations and nested ops. See Learn for examples.",
+  "doc_url": "https://learn.microsoft.com/en-us/power-automate/minit/calculation-context"
+}

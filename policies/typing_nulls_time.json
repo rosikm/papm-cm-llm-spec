@@ -1,0 +1,20 @@
+{
+  "typing": {
+    "coercions": {
+      "INT->FLOAT": "allow",
+      "FLOAT->INT": "disallow",
+      "STRING->INT": "allow_via_TOINT",
+      "DATE<->TIME": "disallow_except_documented_ops" 
+    },
+    "operator_compat": "see grammar/operators.json typeRules"
+  },
+  "nulls": {
+    "empty_group_default": "must use function default if supported (e.g., AVGIF default)",
+    "bool_three_valued": false
+  },
+  "time": {
+    "date_add": ["ADDDAYS","ADDHOURS","ADDMINUTES","ADDSECONDS","ADDMILLIS","ADDYEARS"],
+    "time_construction": ["TOTIME","TOTIMEFROMDAYS","TOTIMEFROMHOURS","TOTIMEFROMMINUTES","TOTIMEFROMSECONDS","TOTIMEFROMMILLIS"],
+    "interval_extraction": ["DAYS","HOURS","MINUTES","SECONDS","MILLISECONDS","TOTALDAYS","TOTALHOURS","TOTALMINUTES","TOTALSECONDS","TOTALMILLIS"]
+  }
+}

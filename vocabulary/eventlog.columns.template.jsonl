@@ -1,0 +1,11 @@
+{"dataset":"EventLog","version":"template","columns":[
+  {"name":"CaseId","type":"STRING","synonyms":["case","process instance","order","case id"],"semantics":"identifier"},
+  {"name":"Activity","type":"STRING","synonyms":["step","task","operation","event name"],"semantics":"categorical"},
+  {"name":"StartTime","type":"DATE","synonyms":["start","begin","event start","timestamp"],"semantics":"timestamp"},
+  {"name":"EndTime","type":"DATE","synonyms":["end","finish","event end"],"semantics":"timestamp"},
+  {"name":"EventTime","type":"DATE","synonyms":["time","date","when"],"semantics":"timestamp"},
+  {"name":"Resource","type":"STRING","synonyms":["user","agent","assignee","operator"],"semantics":"actor"},
+  {"name":"VendorId","type":"STRING","synonyms":["supplier","provider","vendor"],"semantics":"party"},
+  {"name":"InvoiceAmount","type":"FLOAT","synonyms":["amount","total","value","sum"],"unit":"currency"},
+  {"name":"IsOverdue","type":"BOOL","synonyms":["overdue","late","delayed"],"semantics":"flag"}
+]}
