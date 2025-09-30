@@ -1,4 +1,4 @@
-# PAPM LLM-Ready Documentation Package
+# PAPM CM LLM-Ready Documentation Package
 
 This repository provides a **machine-readable specification** for **Power Automate Process Mining (PAPM) custom metrics**, designed to enable an **LLM-based agent** to translate natural language into syntactically correct PAPM formulas.
 
