@@ -5,6 +5,8 @@ This repository provides a **machine-readable specification** for **Power Automa
 ---
 
 ## 📂 Repository Structure
+
+```ultree
 papm-llm-spec/
 ├── functions/
 │   ├── function.schema.json        # JSON schema for function entries
@@ -26,6 +28,7 @@ papm-llm-spec/
 │   ├── canonicalization.json       # Formatting rules for formulas
 │   └── guardrails.json             # Safety & validation rules
 └── README.md
+```
 ---
 
 ## ✅ What’s Inside
