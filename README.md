@@ -29,6 +29,7 @@ papm-llm-spec/
 │   └── guardrails.json                 # Safety & validation rules
 └── README.md
 ```
+
 ---
 
 ## ✅ What’s Inside
