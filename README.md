@@ -9,24 +9,24 @@ This repository provides a **machine-readable specification** for **Power Automa
 ```ultree
 papm-llm-spec/
 ├── functions/
-│   ├── function.schema.json        # JSON schema for function entries
-│   └── registry.jsonl              # All PAPM functions in JSONL format
+│   ├── function.schema.json            # JSON schema for function entries
+│   └── registry.jsonl                  # All PAPM functions in JSONL format
 ├── grammar/
-│   ├── expression.ebnf             # EBNF grammar for PAPM formulas
-│   └── operators.json              # Operator precedence & type rules
+│   ├── expression.ebnf                 # EBNF grammar for PAPM formulas
+│   └── operators.json                  # Operator precedence & type rules
 ├── contexts/
-│   └── calculation-contexts.json   # Supported calculation contexts
+│   └── calculation-contexts.json       # Supported calculation contexts
 ├── types/
-│   ├── data-types.json             # INT, FLOAT, DATE, TIME, etc.
-│   └── constants.json              # PI, E constants
+│   ├── data-types.json                 # INT, FLOAT, DATE, TIME, etc.
+│   └── constants.json                  # PI, E constants
 ├── vocabulary/
 │   └── eventlog.columns.template.jsonl # Template for schema synonyms
 ├── examples/
-│   └── prompts_to_formulas.jsonl   # Few-shot NL → formula examples
+│   └── prompts_to_formulas.jsonl       # Few-shot NL → formula examples
 ├── policies/
-│   ├── typing_nulls_time.json      # Type coercion & null handling
-│   ├── canonicalization.json       # Formatting rules for formulas
-│   └── guardrails.json             # Safety & validation rules
+│   ├── typing_nulls_time.json          # Type coercion & null handling
+│   ├── canonicalization.json           # Formatting rules for formulas
+│   └── guardrails.json                 # Safety & validation rules
 └── README.md
 ```
 ---
