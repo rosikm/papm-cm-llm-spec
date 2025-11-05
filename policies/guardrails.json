@@ -4,5 +4,14 @@
   "forbid_unknown_contexts": true,
   "max_nesting_depth": 12,
   "quantile": { "compression_range": [20, 1000], "default": 200 },
-  "cdf": { "compression_range": [20, 1000], "default": 200 }
+  "cdf": { "compression_range": [20, 1000], "default": 200 },
+  "forbidden_operators": {
+    "note": "Word-based logical operators are not supported in PAPM formula syntax",
+    "list": ["AND", "OR", "NOT"],
+    "use_instead": {
+      "AND": "&&",
+      "OR": "||",
+      "NOT": "!"
+    }
+  }
 }

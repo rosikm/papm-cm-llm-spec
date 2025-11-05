@@ -32,7 +32,7 @@ papm-llm-spec/
 
 ---
 
-## ✅ What’s Inside
+## ✅ What's Inside
 
 - **Function Registry**: All PAPM functions with signatures, types, examples, and retrieval metadata.
 - **Grammar**: EBNF + operator precedence for parsing and validation.
@@ -41,6 +41,19 @@ papm-llm-spec/
 - **Vocabulary Template**: Map user terms to dataset columns.
 - **Examples**: Few-shot pairs for training or prompting.
 - **Policies**: Guardrails for validation, canonicalization, and type safety.
+
+---
+
+## ⚠️ Important Syntax Notes
+
+**Logical Operators**: PAPM uses **symbolic operators only**:
+
+- ✅ Use `&&` for logical AND
+- ✅ Use `||` for logical OR  
+- ✅ Use `!` for logical NOT
+- ❌ Word-based operators (`AND`, `OR`, `NOT`) are **NOT supported**
+
+See `policies/guardrails.json` and `policies/canonicalization.json` for complete syntax rules.
 
 ---
 
