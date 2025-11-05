@@ -10,5 +10,21 @@
       "or": "||",
       "not": "!"
     }
+  },
+  "attribute_references": {
+    "note": "Attribute names must be referenced correctly based on their naming convention.",
+    "simple_identifiers": {
+      "description": "Attributes without spaces or special characters should be referenced directly as identifiers.",
+      "syntax": "attributeName",
+      "examples": ["userName", "Activity", "CaseId", "InvoiceAmount", "VendorId"],
+      "forbidden": "[attributeName]",
+      "rule": "DO NOT use brackets for simple attribute names"
+    },
+    "names_with_spaces": {
+      "description": "Attributes with spaces or special characters must use GETVALUE function.",
+      "syntax": "GETVALUE(\"attribute name\")",
+      "examples": ["GETVALUE(\"invoice total\")", "GETVALUE(\"user name\")", "GETVALUE(\"order date\")"],
+      "rule": "ALWAYS use GETVALUE() with quoted string for attributes containing spaces"
+    }
   }
 }

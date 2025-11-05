@@ -53,6 +53,13 @@ papm-llm-spec/
 - ✅ Use `!` for logical NOT
 - ❌ Word-based operators (`AND`, `OR`, `NOT`) are **NOT supported**
 
+**Attribute References**:
+
+- ✅ Simple names (no spaces): Use directly as identifiers → `userName`, `Activity`, `InvoiceAmount`
+- ❌ Do NOT use brackets for simple names → `[userName]`, `[Activity]` are **INVALID**
+- ✅ Names with spaces: Use `GETVALUE()` function → `GETVALUE("invoice total")`
+- ❌ Do NOT use brackets for any attribute names → `[invoice total]` is **INVALID**
+
 See `policies/guardrails.json` and `policies/canonicalization.json` for complete syntax rules.
 
 ---

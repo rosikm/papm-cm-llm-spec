@@ -15,3 +15,11 @@ ArgList         ::= Expression { "," Expression } ;
 
 literal         ::= INT | FLOAT | STRING | BOOL | DATE_LITERAL | TIME_LITERAL ;
 IDENT           ::= /* letters, digits, underscore, not starting with digit */ ;
+
+/* 
+ * Attribute Reference Rules:
+ * - Simple attributes (no spaces): Use identifier directly (e.g., userName, Activity)
+ * - Attributes with spaces: Use GETVALUE("attribute name") function
+ * - Brackets around identifiers [name] are NOT valid syntax
+ */
+Identifier      ::= IDENT ;  /* Direct attribute reference without brackets */

@@ -13,5 +13,18 @@
       "OR": "||",
       "NOT": "!"
     }
+  },
+  "attribute_reference_rules": {
+    "forbid_brackets_for_simple_names": {
+      "description": "Brackets around attribute names are not valid syntax. Simple identifiers should be used directly.",
+      "forbidden_pattern": "[attributeName]",
+      "correct_pattern": "attributeName",
+      "validation": "Reject any formula containing [identifier] where identifier contains no spaces"
+    },
+    "require_getvalue_for_spaces": {
+      "description": "Attribute names containing spaces must use the GETVALUE function.",
+      "required_pattern": "GETVALUE(\"attribute with spaces\")",
+      "validation": "Ensure attributes with spaces are accessed via GETVALUE() function only"
+    }
   }
 }
