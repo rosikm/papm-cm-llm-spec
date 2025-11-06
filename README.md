@@ -76,7 +76,7 @@ See `policies/guardrails.json` and `policies/canonicalization.json` for complete
 
 ## ✅ Quickstart Guide
 
-### VS Code
+### 💻 VS Code
 
 Use this repository with **GitHub Copilot Chat in Agent Mode** to get AI assistance for PAPM formula generation:
 
@@ -142,7 +142,7 @@ With agent mode enabled, GitHub Copilot can intelligently search and reference f
 - **Reference examples** by asking Copilot to show similar patterns from the spec
 - The agent will automatically search through `functions/registry.jsonl`, `examples/prompts_to_formulas.jsonl`, and policy files
 
-### Claude Desktop
+### 🤖 Claude Desktop
 
 Use this repository with **Claude Desktop** for formula generation assistance by adding it directly from GitHub:
 
