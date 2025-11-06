@@ -76,6 +76,10 @@ See `policies/guardrails.json` and `policies/canonicalization.json` for complete
 
 ## ✅ Quickstart Guide
 
+### 🤖 Suggested LLM
+
+For best results, we recommend using **Claude Sonnet 4.5** (claude-sonnet-4-20250514). This model has demonstrated excellent performance in understanding PAPM formula syntax, function semantics, and generating accurate formulas from natural language queries.
+
 ### 💻 VS Code
 
 Use this repository with **GitHub Copilot Chat in Agent Mode** to get AI assistance for PAPM formula generation:
