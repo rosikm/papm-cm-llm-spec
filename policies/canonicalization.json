@@ -26,5 +26,12 @@
       "examples": ["GETVALUE(\"invoice total\")", "GETVALUE(\"user name\")", "GETVALUE(\"order date\")"],
       "rule": "ALWAYS use GETVALUE() with quoted string for attributes containing spaces"
     }
+  },
+  "custom_metric_references": {
+    "note": "User-defined custom metrics must be referenced as function calls. Writing the bare identifier resolves to an attribute lookup, not the metric.",
+    "syntax": "metricName()",
+    "examples": ["hA()", "followedA()", "isFinishedCase()"],
+    "forbidden": "metricName",
+    "rule": "ALWAYS append () when invoking a custom metric inside another formula. Custom metrics that take no arguments still require the empty parentheses."
   }
 }
